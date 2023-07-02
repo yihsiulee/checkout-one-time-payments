@@ -22,7 +22,7 @@ const Checkout = () => {
   const [quantity, setQuantity] = useState(1);
   const [amount, setAmount] = useState(0);
   const [currency, setCurrency] = useState('USD');
-
+//當loading頁面進來後，會先執行useEffect，然後執行fetchConfig，根據config去setAmount，setCurrency
   useEffect(() => {
     async function fetchConfig() {
       // Fetch config from our backend.

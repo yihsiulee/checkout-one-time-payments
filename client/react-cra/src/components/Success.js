@@ -6,6 +6,7 @@ const Success = () => {
   const location = useLocation();
   const sessionId = location.search.replace('?session_id=', '');
 
+  //當有sessionId時，會先執行useEffect，然後執行fetchSession去重組session，且帶入sessionId
   useEffect(() => {
     async function fetchSession() {
       setSession(

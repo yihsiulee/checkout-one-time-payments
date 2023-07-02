@@ -16,8 +16,9 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
   }
 });
 
-
+// 靜態資源來源
 app.use(express.static(process.env.STATIC_DIR));
+//用於解析 URL 編碼形式的請求主體的 Express 中間件。能夠從 POST 請求中獲取表單資料，使用 req.body 來獲取 POST 請求中的表單資料。
 app.use(express.urlencoded());
 app.use(
   express.json({
